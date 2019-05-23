@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/stylesheet.css' %}"/>
+    <!-- 1. Link to jQuery (1.8 or later), -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
+    <!-- fotorama.css & fotorama.js. -->
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+    <script src="{% static 'scripts/main.js' %}"></script>
+    <title>popKorn</title>
+    <style>
+    body{
+    padding:0px;
+    margin:0px;
+}
+h1{
+    color: #ff0000;
+}
+a{
+    text-decoration: none;
+    color:var(--basic-txt-color);
+}
+header{
+    display:block;
+    border-bottom:1px solid var(--basic-br-color);
+    width:100%;
+    height:10px;
+    position:fixed;
+    top:0;
+    background-color:#ffffff;
+    padding:20px 0px;
+    font-size:0.8em;
+}
+header ul{
+    display:block;
+    margin:auto;
+}
+
+header li{
+    list-style:none;
+    display:inline-block;
+    margin:0px 20px;
+}
+
+header strong{
+    float:left;
+    margin-left:50px;
+    margin-right:70px;
+}
+header .btn{
+    float:right;
+    margin-right:30px;
+    margin-top:-20px;
+}
+
+header li a:hover{
+    text-decoration:overline;
+    text-decoration-color: rgb(0, 153, 255);
+}
+
+footer{
+    background: #383838;
+    color:#c4c3c3;
+    font-size:0.6em;
+    padding:20px;
+}
+footer strong{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+/*클래스*/
+.btn{
+    border:0.8px solid var(--basic-br-color);
+    border-radius:5px; 
+    padding:5px;
+    background-color:#ffffff;
+}
+.btn:hover{
+    background-color:#8a8888;
+}
+
+
+/*인덱스 페이지*/
+#index section{
+    display:block;
+    margin-top:5100000px;
+}
+#index article{
+    display: block;
+    border-bottom: 1px solid var(--basic-br-color);
+    
+
+}
+.fotorama div{
+    height:100%;
+}
+.fotorama a{
+    z-index: 1;
+    display:block;
+    height: 100%;
+
+}
+</style>
+</head>
+
+
+<body id="index">
+    <header>
+        <strong><a href="">POPKORN</a></strong>
+        <ul>
+            <li><a href="news">NEWS</a></li>
+            <li><a href="chart">CHART</a></li>
+            <li><a href="media">MEDIA</a></li>
+            <li><a href="calendar">CALENDAR</a></li>
+            <li><a href="community">COMMUNITY</a></li>
+        </ul>
+        <a href="" class="btn">LOGIN</a></header>
+    <section>
+        <article>
+            <div class="fotorama" 
+                    data-loop = "true"
+                    data-autoplay="2000" 
+                    data-arrows="false"
+                    data-keyboard="true"
+                    data-width="100%"
+                    data-height="400"
+                    data-click="false"
+                    data-swipe="false"
+                    data-nav="false"
+                    >
+                <div data-img="https://www.allkpop.com/upload/2019/05/content/190416/btsjpg.jpg"
+                        data-fit="cover">
+                    <a href="https://www.allkpop.com/article/2019/05/boy-with-luv-becomes-btss-tenth-music-video-to-surpass-300-million-youtube-views">
+                        NEWS Posted by danisurst AKP STAFF  23 hours ago
+                        'Boy With Luv' becomes BTS's tenth music video to surpass 300 million YouTube views
+                    </a>
+                </div>
+                <div data-img="https://www.allkpop.com/upload/2019/05/content/011128/twjpg.jpg"
+                        data-fit="cover">
+                        <a href="https://www.allkpop.com/article/2019/05/twice-announce-their-first-ever-us-tour-dates">
+                        TWICE announce their first-ever U.S tour dates!
+                    </a>
+                </div>
+                <div data-img="https://www.allkpop.com/upload/2019/05/content/081710/bpjpg.jpg"
+                        data-fit="cover">
+                        <a href="https://www.allkpop.com/article/2019/05/blackpink-becomes-the-most-streamed-girl-group-in-youtube-history">
+                            BLACKPINK becomes the most streamed girl group in YouTube history
+                        </a>
+                </div>
+            </div>        
+        </article>
+        <article>
+            <h1>Today's KPOP</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XsX3ATc3FbA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </article>
+        <article>Main artists</article>
+       
+
+    </section>
+    <footer>
+        <strong>31mg</strong><br/>진호&nbsp;|&nbsp;kartmon@naver.com<br/>
+    </footer>
+</body>
+
+
+</html>
